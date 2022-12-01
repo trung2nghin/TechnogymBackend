@@ -5,12 +5,11 @@ const Schema = mongoose.Schema;
 const Comment = new Schema(
   {
     productId: { type: String, required: true },
-    comments: [
-      {
-        userId: { type: String },
-        desc: { type: String },
-      },
-    ],
+    comments: {
+      userId: { type: String },
+      userName: { type: String },
+      desc: { type: String },
+    },
   },
   { timestamps: true }
 );

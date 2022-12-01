@@ -1,34 +1,42 @@
 const express = require('express');
 const router = express.Router();
 
-const cartController = require('../app/controllers/cartController');
+const commentController = require('../app/controllers/commentController');
 const middlewareController = require('../app/controllers/middlewareController');
 
-// POST CART
-router.post('/', middlewareController.verifyToken, cartController.createCart);
+// POST COMMENT
+router.post(
+  '/',
+  middlewareController.verifyToken,
+  commentController.createComment
+);
 
 // GET ALL
 router.get(
   '/',
   middlewareController.verifyTokenAndAdminAuth,
-  cartController.getAll
+  commentController.getAllComment
 );
 
-// GET CART
+// GET COMMENT
 router.get(
   '/find/:userId',
   middlewareController.verifyToken,
-  cartController.getCart
+  commentController.getAllComment
 );
 
-// UPDATE CART
-router.put('/:id', middlewareController.verifyToken, cartController.updateCart);
+// UPDATE COMMENT
+router.put(
+  '/:id',
+  middlewareController.verifyToken,
+  commentController.updateComment
+);
 
-// DELETE CART
+// DELETE COMMENT
 router.delete(
   '/:id',
   middlewareController.verifyToken,
-  cartController.deleteCart
+  commentController.deleteComment
 );
 
 module.exports = router;
