@@ -15,7 +15,7 @@ const commentController = {
   // GET USER COMMENT
   getComment: async (req, res) => {
     try {
-      const comments = await Comment.findOne({ userId: req.params.userId });
+      const comments = await Comment.find({ productId: req.params.productId });
       res.status(200).json(comments);
     } catch (err) {
       res.status(500).json(err);

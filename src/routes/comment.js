@@ -20,9 +20,9 @@ router.get(
 
 // GET COMMENT
 router.get(
-  '/find/:userId',
+  '/find/:productId',
   middlewareController.verifyToken,
-  commentController.getAllComment
+  commentController.getComment
 );
 
 // UPDATE COMMENT
