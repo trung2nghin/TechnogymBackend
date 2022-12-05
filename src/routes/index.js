@@ -7,6 +7,7 @@ const paymentRouter = require('./stripe');
 const commentRouter = require('./comment');
 const conversationRouter = require('./conversation');
 const messageRouter = require('./message');
+const newsRouter = require('./news');
 
 function route(app) {
   app.use('/v1/auth', authRouter);
@@ -18,6 +19,7 @@ function route(app) {
   app.use('/v1/comment', commentRouter);
   app.use('/v1/conversation', conversationRouter);
   app.use('/v1/message', messageRouter);
+  app.use('/v1/news', newsRouter);
 }
 
 module.exports = route;

@@ -1,5 +1,5 @@
 const stripe = require('stripe')(
-  'sk_test_51LmbKgI9OKnTwToJoy32fn8VUmShTGkkDu0IT3FTBQQawxEdpo3Lwncxk7v0PK45NQuhFi2DDi5RoDfX3uSXHAUZ00IhyHLMe4'
+  'sk_test_51M7gPYACPyXHkSWyqweLfEtKiLV3Lk26PJmfbG5UKZ5cJjHATLmnyxOAcs5g2eyFqXhFzsjQQwBmQQc95ZpKHQaj003ZUST6Th'
 );
 
 const stripeController = {

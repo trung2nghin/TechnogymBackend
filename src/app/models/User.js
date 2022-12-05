@@ -23,6 +23,16 @@ const User = new Schema(
       required: true,
       minlength: 6,
     },
+    address: {
+      type: String,
+      minlength: 10,
+      maxlength: 50,
+    },
+    gender: {
+      type: String,
+      minlength: 4,
+      maxlength: 20,
+    },
     admin: {
       type: Boolean,
       default: false,
