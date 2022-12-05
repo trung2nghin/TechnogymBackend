@@ -4,6 +4,8 @@ const Schema = mongoose.Schema;
 
 const News = new Schema(
   {
+    mainImage: { type: String },
+    mainTitle: { type: String },
     headerImage: { type: String },
     bodyImage: { type: String },
     noteImage: { type: String },
