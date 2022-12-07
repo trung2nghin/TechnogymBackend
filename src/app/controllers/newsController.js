@@ -16,7 +16,7 @@ const newsController = {
   getAllNews: async (req, res) => {
     try {
       const news = await News.find();
-      res.status().json(news);
+      res.status(200).json(news);
     } catch (err) {
       res.status(500).json(err);
     }

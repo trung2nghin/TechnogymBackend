@@ -26,7 +26,7 @@ const commentController = {
   getAllComment: async (req, res) => {
     try {
       const comments = await Comment.find();
-      res.status().json(comments);
+      res.status(200).json(comments);
     } catch (err) {
       res.status(500).json(err);
     }
