@@ -25,7 +25,7 @@ const User = new Schema(
     },
     address: {
       type: String,
-      minlength: 10,
+      minlength: 0,
       maxlength: 50,
     },
     gender: {

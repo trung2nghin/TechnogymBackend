@@ -17,6 +17,13 @@ router.get(
 // UPDATE USERS
 router.put('/:id', middlewareController.verifyToken, userController.updateUser);
 
+// CHANGE PASSWORD
+router.patch(
+  '/:id',
+  middlewareController.verifyToken,
+  userController.changePassword
+);
+
 // DELETE USER
 router.get(
   '/:id',
